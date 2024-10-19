@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
 import Defaulterlist from './pages/admin/Defaulterlist';
+import AddAttendance from './pages/teacher/AddAttendance';
 
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
 
           <Route path="/defaulterlist" element={<Defaulterlist />} />
+          <Route path="/Teacher/add-attendance" element={<AddAttendance />} />
 
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}

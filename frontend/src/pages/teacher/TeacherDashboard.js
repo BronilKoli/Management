@@ -24,6 +24,8 @@ import TeacherProfile from './TeacherProfile';
 import TeacherViewStudent from './TeacherViewStudent';
 import StudentExamMarks from '../admin/studentRelated/StudentExamMarks';
 
+import AddAttendance from './AddAttendance';
+
 const TeacherDashboard = () => {
     const [open, setOpen] = useState(true);
     const toggleDrawer = () => {
@@ -80,6 +82,7 @@ const TeacherDashboard = () => {
                         <Route path="/Teacher/profile" element={<TeacherProfile />} />
 
                         <Route path="/Teacher/complain" element={<TeacherComplain />} />
+                        <Route path="/Teacher/add-attendance" element={<AddAttendance />} />
 
                         <Route path="/Teacher/class" element={<TeacherClassDetails />} />
                         <Route path="/Teacher/class/student/:id" element={<TeacherViewStudent />} />
