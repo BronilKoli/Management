@@ -23,7 +23,7 @@ const AddNotice = () => {
 
   const fields = { title, details, date, adminID };
   const address = "Notice"
-
+//hello
   const submitHandler = (event) => {
     event.preventDefault();
     setLoader(true);
