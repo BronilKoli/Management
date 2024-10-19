@@ -59,6 +59,12 @@ const SideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Defaulterlist" />
                 </ListItemButton>
+                <ListItemButton component={Link} to="/Admin/complains">
+                    <ListItemIcon>
+                        <ReportIcon color={location.pathname.startsWith("/Admin/complains") ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary="Complains" />
+                </ListItemButton>
             </React.Fragment>
             <Divider sx={{ my: 1 }} />
             <React.Fragment>
