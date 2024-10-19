@@ -35,12 +35,12 @@ const TeacherSideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary="Complain" />
                 </ListItemButton>
-                <ListItemButton component={Link} to="/Teacher/add-attendance">
+                {/* <ListItemButton component={Link} to="/Teacher/add-attendance">
                     <ListItemIcon>
                         <AccountCircleOutlinedIcon color={location.pathname.startsWith("/Teacher/add-attendance") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="Add Attendance" />
-                </ListItemButton>
+                </ListItemButton> */}
             </React.Fragment>
             <Divider sx={{ my: 1 }} />
             <React.Fragment>
