@@ -16,6 +16,7 @@ import Logout from '../Logout';
 import SideBar from './SideBar';
 import AdminProfile from './AdminProfile';
 import AdminHomePage from './AdminHomePage';
+import Defaulterlist from './Defaulterlist';
 
 import AddStudent from './studentRelated/AddStudent';
 import SeeComplains from './studentRelated/SeeComplains';
@@ -101,6 +102,10 @@ const AdminDashboard = () => {
                         {/* Notice */}
                         <Route path="/Admin/addnotice" element={<AddNotice />} />
                         <Route path="/Admin/notices" element={<ShowNotices />} />
+
+                        {/* Defaulterlist */}
+                        <Route path="/Admin/dashboard" element={<AdminDashboard />} />
+                        <Route path="/Admin/defaulterlist" element={<Defaulterlist />} />
 
                         {/* Subject */}
                         <Route path="/Admin/subjects" element={<ShowSubjects />} />
