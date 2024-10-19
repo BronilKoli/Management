@@ -17,9 +17,10 @@ import StudentProfile from './StudentProfile';
 import StudentSubjects from './StudentSubjects';
 import ViewStdAttendance from './ViewStdAttendance';
 import StudentComplain from './StudentComplain';
-import Logout from '../Logout'
+import Logout from '../Logout';
 import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
+import StudentAlert from './StudentAlert';
 
 const StudentDashboard = () => {
     const [open, setOpen] = useState(true);
@@ -75,11 +76,10 @@ const StudentDashboard = () => {
                         <Route path='*' element={<Navigate to="/" />} />
                         <Route path="/Student/dashboard" element={<StudentHomePage />} />
                         <Route path="/Student/profile" element={<StudentProfile />} />
-
                         <Route path="/Student/subjects" element={<StudentSubjects />} />
+                        <Route path="/Student/alerts" element={<StudentAlert />} />
                         <Route path="/Student/attendance" element={<ViewStdAttendance />} />
                         <Route path="/Student/complain" element={<StudentComplain />} />
-
                         <Route path="/logout" element={<Logout />} />
                     </Routes>
                 </Box>
@@ -88,7 +88,7 @@ const StudentDashboard = () => {
     );
 }
 
-export default StudentDashboard
+export default StudentDashboard;
 
 const styles = {
     boxStyled: {
@@ -99,6 +99,7 @@ const styles = {
         flexGrow: 1,
         height: '100vh',
         overflow: 'auto',
+        padding: '20px', // Adding padding for better aesthetics
     },
     toolBarStyled: {
         display: 'flex',
@@ -115,4 +116,4 @@ const styles = {
             display: 'none',
         },
     },
-}
+};
