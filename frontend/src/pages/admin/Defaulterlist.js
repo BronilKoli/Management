@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx'; // Import the xlsx library
+// import { Defaulter } from '../../../../backend/models/defaulterListSchema.js';
 
 const Defaulterlist = () => {
     const [defaulters, setDefaulters] = useState([]);
@@ -22,6 +23,11 @@ const Defaulterlist = () => {
             setLastAction('');
         }
     };
+    // const defaulterList = Defaulter.create({
+    //     name: name,
+    //     reason: reason,
+     
+    // })
 
     const handleFileUpload = (e) => {
         const file = e.target.files[0];
@@ -52,12 +58,12 @@ const Defaulterlist = () => {
             <h1>Student Defaulter List</h1>
             <p>This page displays a list of students who are currently in default.</p>
 
-            <input 
+            {/* <input 
                 type="file" 
                 accept=".xlsx, .xls" 
                 onChange={handleFileUpload} 
                 className="file-upload" 
-            />
+            /> */}
 
             <form onSubmit={handleAddDefaulter} className="defaulter-form">
                 <input
@@ -98,12 +104,12 @@ const Defaulterlist = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {defaulters.map((defaulter) => (
-                            <tr key={defaulter.id}>
-                                <td>{defaulter.id}</td>
-                                <td>{defaulter.name}</td>
-                                <td>{defaulter.reason}</td>
-                                <td>{defaulter.lastAction}</td>
+                        {defaulters.map((defaulters) => (
+                            <tr key={defaulters.id}>
+                                <td>{defaulters.id}</td>
+                                <td>{defaulters.name}</td>
+                                <td>{defaulters.reason}</td>
+                                <td>{defaulters.lastAction}</td>
                             </tr>
                         ))}
                     </tbody>

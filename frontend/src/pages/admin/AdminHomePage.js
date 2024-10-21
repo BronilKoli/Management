@@ -12,13 +12,13 @@ import { getAllSclasses } from '../../redux/sclassRelated/sclassHandle';
 import { getAllStudents } from '../../redux/studentRelated/studentHandle';
 import { getAllTeachers } from '../../redux/teacherRelated/teacherHandle';
 
+
 const AdminHomePage = () => {
     const dispatch = useDispatch();
     const { studentsList } = useSelector((state) => state.student);
     const { sclassesList } = useSelector((state) => state.sclass);
-    const { teachersList } = useSelector((state) => state.teacher);
-
-    const { currentUser } = useSelector(state => state.user)
+    const { teachersList } = useSelector((state) => state.teacher); 
+    const { currentUser } = useSelector((state) => state.user)
 
     const adminID = currentUser._id
 
@@ -103,3 +103,7 @@ const Data = styled(CountUp)`
 `;
 
 export default AdminHomePage
+
+
+
+

@@ -5,6 +5,7 @@ const Student = require('../models/studentSchema.js');
 const Teacher = require('../models/teacherSchema.js');
 const Subject = require('../models/subjectSchema.js');
 const Notice = require('../models/noticeSchema.js');
+// const Default = require("../models/defaulterListSchema.js")
 const Complain = require('../models/complainSchema.js');
 
 // const adminRegister = async (req, res) => {
@@ -103,7 +104,8 @@ const getAdminDetail = async (req, res) => {
         let admin = await Admin.findById(req.params.id);
         if (admin) {
             admin.password = undefined;
-            res.send(admin);
+  
+          res.send(admin);
         }
         else {
             res.send({ message: "No admin found" });
@@ -112,7 +114,6 @@ const getAdminDetail = async (req, res) => {
         res.status(500).json(err);
     }
 }
-
 // const deleteAdmin = async (req, res) => {
 //     try {
 //         const result = await Admin.findByIdAndDelete(req.params.id)
